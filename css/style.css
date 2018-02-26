@@ -45,7 +45,7 @@
     border: 1px solid #4d90fe
 }
 
-#next {
+#next,#create,#register {
     -moz-user-select: none;
     user-select: none;
     cursor: pointer;

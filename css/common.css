@@ -249,7 +249,7 @@ div#background_page_overlay {
     margin-right: auto;
     width: 350px;
     height: 400px;
-    border: black 1px solid;
+    /*border: black 1px solid;*/
 }
 #panel_center_creat{
     background-color: white;
@@ -258,7 +258,7 @@ div#background_page_overlay {
     margin-right: auto;
     width: 350px;
     height: 500px;
-    border: black 1px solid;
+    /*border: black 1px solid;*/
 }
 #panel_center_forgot{
     background-color: white;
@@ -267,7 +267,7 @@ div#background_page_overlay {
     margin-right: auto;
     width: 350px;
     height: 450px;
-    border: black 1px solid;
+    /*border: black 1px solid;*/
 }
 .hide {
     opacity: 0
