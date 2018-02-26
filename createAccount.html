@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>注册</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta charset="utf-8">
+    <meta name="locale" content="en-US">
+    <meta name="ROBOTS" content="NONE, NOARCHIVE">
+    <meta name="GOOGLEBOT" content="NOARCHIVE">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=2.0, user-scalable=yes">
+    <link href="css/common.css" rel="stylesheet" type="text/css" />
+    <link href="css/style.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="background_branding_container">
+    <img id="background_background_image" src="https://login.microsoftonline.com/static/tenant/default/img/default_signin_illustration_optimized.png"
+         alt="Illustration" />
+</div>
+<p id="page_loaded_msg" role="alert" aria-live="assertive" tabindex="-1" aria-label="Page has been loaded successfully"></p>
+<div class="panel" id="panel">
+    <table class="panel_layout">
+        <tbody>
+        <div class="panel_layout_row">
+            <div id="panel_center_create">
+                <img alt="pf_studio" class="login_logo" src="images/logo.png" />
+                <div class="inner_container">
+                    <div class="api_container normaltext">
+
+                            <div id="api" data-name="Unified" style="">
+
+                                <div class="localAccount" role="form">
+                                    <div class="error pageLevel" aria-hidden="true" style="display: none;">
+                                        <p role="alert"></p>
+                                    </div>
+
+                                    <div class="attrEntry">
+                                        <div class="entry-item">
+                                        <label>学号</label>
+                                            <input id="displayName" class="textInput" type="text"  required="">
+                                            <div class="error itemLevel" aria-hidden="true" style="display: none;">
+                                                <p role="alert"></p>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="entry">
+                                        <div class="entry-item">
+                                            <label for="logonIdentifier">
+                                                电子邮件地址
+                                            </label>
+                                            <div class="error itemLevel" aria-hidden="true" style="display: none;">
+                                                <p role="alert"></p>
+                                            </div>
+                                            <input type="email" id="logonIdentifier" name="Username or email address" pattern="^[A-Za-z\d]+([-_.][A-Za-z\d]+)*@([A-Za-z\d]+[-.])+[A-Za-z\d]{2,4}$"  value="" tabindex="1">
+                                        </div>
+
+                                        <div class="buttons verify" claim_id="email">
+                                            <div id="email_ver_wait" class="working" style="display: none;"></div>
+                                            <label id="email_ver_input_label" for="email_ver_input" style="display: none;" >验证码</label>
+                                            <input id="email_ver_input" type="text" placeholder="Verification code" style="display:none">
+                                            <button id="email_ver_but_send" class="sendButton" type="button" style="display: inline;" > 获取验证码 </button>
+                                            <button id="email_ver_but_verify" class="verifyButton" type="button" style="display:none">验证码</button>
+                                            <button id="email_ver_but_resend" class="sendButton" type="button" style="display:none">重新获取</button>
+                                            <button id="email_ver_but_edit" class="editButton" type="button" style="display:none">修改邮箱</button>
+                                            <button id="email_ver_but_default" class="defaultButton" type="button" style="display:none">Default</button>
+                                        </div>
+                                        <br>
+
+                                        <div class="entry-item">
+                                            <div class="password-label">
+                                                <label for="password">密码</label>
+                                            </div>
+                                            <div class="error itemLevel" aria-hidden="true" style="display: none;">
+                                                <p role="alert"></p>
+                                            </div>
+                                            <input type="password" id="password" name="密码" tabindex="1">
+
+                                            <div class="password-label">
+                                                <label for="password">确认密码</label>
+                                            </div>
+                                            <div class="error itemLevel" aria-hidden="true" style="display: none;">
+                                                <p role="alert"></p>
+                                            </div>
+                                            <input id="reenterPassword"  type="password"  pattern="^((?=.*[a-z])(?=.*[A-Z])(?=.*\d)|(?=.*[a-z])(?=.*[A-Z])(?=.*[^A-Za-z0-9])|(?=.*[a-z])(?=.*\d)(?=.*[^A-Za-z0-9])|(?=.*[A-Z])(?=.*\d)(?=.*[^A-Za-z0-9]))([A-Za-z\d@#$%^&amp;*\-_+=[\]{}|\\:',?/`~&quot;();!]|\.(?!@)){8,16}$" title=" " required="">
+                                        </div>
+                                        <div class="working"></div>
+                                        <div class="buttons">
+                                            <button id="create" tabindex="1">注册</button>
+                                        </div>
+                                    </div>
+                                    <br>
+                                </div>
+                            </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </tbody>
+    </table>
+</div>
+<script>"use strict"; $(document).ready(function () { if (navigator.userAgent.match(/IEMobile\/10\.0/)) { var t = document.createElement("style"); t.appendChild(document.createTextNode("@-ms-viewport{width:auto!important}")), t.appendChild(document.createTextNode("@-ms-viewport{height:auto!important}")), document.getElementsByTagName("head")[0].appendChild(t) } if (navigator.userAgent.match(/MSIE 10/i)) { var e = $("#footer_links_container"); $(e).css("padding-top", "100px") } var o, i = $("#background_background_image"), n = function () { document.body.style.overflow = "hidden", ($(window).width() - 500) / $(window).height() < o ? (i.height($(window).height()), i.width("auto")) : (i.width($(window).width() - 500), i.height("auto")), document.body.style.overflow = "" }; $("<img>").attr("src", i.attr("src")).load(function () { o = this.width / this.height, n() }), $(window).resize(function () { n() }), "undefined" != typeof $("#MicrosoftAccountExchange") && $("#MicrosoftAccountExchange").text("Microsoft"), $("*").removeAttr("placeholder") });</script>
+</body>
+</html>
